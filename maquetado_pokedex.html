@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body >
+    <style>
+        body {
+            font-family: Verdana;
+            margin: 0;
+        }
+        header{
+            background-color:orange;
+            color: white;
+            padding: 0 10%;
+        }
+        header  >h1{
+            display: inline-block;
+            margin-left: 30px;
+        }
+        #logo{
+            width: 80px;
+        }
+        nav{
+            margin: 10px 10%;
+        }
+        nav >a{
+            padding: 0 10px;
+        }
+        #pokedex{
+            width: 750px;
+            margin: 50px auto;
+        }
+        #left{
+            width: 250px;
+            height: 300px;
+            float: left;
+            background-color: orangered;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            
+        }
+        
+        #right{
+            width: 250px;
+            height: 250px;
+            margin-top: 50px;
+            background-color: orangered;
+            border-left-color: black;
+            border-left-style: solid;
+            border-left-width: 3px;
+            float : left;
+            border-bottom-right-radius: 30px;
+        }
+        .display{
+            border-color: #494949;
+            border-style: solid;
+            border-radius: 15px;
+            border-width: 5px;
+        }
+        #left > .display {
+            width: 180px;
+            height: 150px;
+            margin-left: 35px;
+            margin-top: 40px;
+            background-color: white;
+        }
+        #left> .display > img{
+            margin-left: 15px;
+            height: 100%;
+        }
+        #dpad{
+            width: 60px;
+            height: 60px;
+            margin-top: 15px;
+            margin-left: 20px;
+            display: inline-block;
+        }
+        #dpad-top, #dpad-bottom{
+            width: 20px;
+            height: 20px;
+            margin-left: 20px;
+            background-color: #000000;
+        }
+        #dpad-horizontal{
+            width: 60px;
+            height: 20px;
+            background-color: #000000;
+        }
+        #btn-circle{
+            width: 50px;
+            height: 50px;
+            margin-left: 5px;
+            border-style: solid;
+            border-color: #000000;
+            border-radius: 25px;
+            background-color: #000000;
+            display: inline-block;
+            margin-left: 80px;
+
+        }        
+        #right > .display{
+            width: 180px;
+            height: 120px;
+            margin-left: 35px;
+            margin-top: 20px;
+            border-color: white;
+            font-size: 12px;
+        }
+        #pad {
+            width: 148px;
+            height: 65px;
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+        #pad > .btn {
+            width: 25px;
+            height: 25px;
+            background-color: #000000;
+            display: inline-block;
+            border-style: solid;
+            border-color: gray;
+            border-width: 2px;
+            border-radius: 3px;
+        } 
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        li > p {
+            margin: 0 5px;
+        }
+    </style>
+    <header>
+        
+    <img  id="logo" src="img-proyecto-final.html/logo.png"   alt="logo"   width="200px">
+    <h1>Mi Pokedex</h1>
+
+    <header>
+        <nav>
+            <a href="portafolio.html">Inicio</a>
+            <a href="https://www.google.com">Acerca</a>
+        </nav>
+        <hr>
+        <main>
+            <div id="pokedex">
+                <div id="left">
+                <div class="display">
+                    <img  id="pkm-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7ef1e284-dc09-45bb-a1ee-d8c65a1ae170/d7dwh31-95fa41d0-7763-47d6-8916-71e8e0f5459e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi83ZWYxZTI4NC1kYzA5LTQ1YmItYTFlZS1kOGM2NWExYWUxNzAvZDdkd2gzMS05NWZhNDFkMC03NzYzLTQ3ZDYtODkxNi03MWU4ZTBmNTQ1OWUucG5nIn1dXX0.TF-inKUsyMIGk9hYrxwS7EXbJbKTCs2CfMIuiQdIwnI" alt="pokemon">
+            </div>
+            <div id="dpad" onclick="buscar()">
+                <div id="dpad-top"></div>
+                <div id="dpad-horizontal"></div>
+                <div id="dpad-bottom"></div>
+            </div>
+            <div id="btn-circle"></div>
+            </div>
+            <div id="right">
+            <div class="display">
+            <ul>
+                <li>
+                    <p id="name"><b> Nombre: Squirtle</b></p>
+                </li>
+                <li>
+                    <p id="type"><b>Tipo: Tortuguita</b></p>
+                </li>
+                <li>
+                    <p id="height"><b>Altura: 0,5 m</b></p>
+                </li>
+                <li>
+                    <p id="weight"><b>Peso: 9,0 kg</b></p>
+                </li>
+                <li>
+                    <p id="des"><b>Descripcion:
+                         Lanza agua a su presa desde el agua. 
+                         </b></p>
+                </li>
+               
+               </ul>
+            </div>
+            <div id="pad">
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+               <div class="btn"></div>
+            </div> 
+        </main>
+    </header>
+
+
+    
+</body>
+    
+
+
+    <script src="js2/ejem_API_poke.js">
+    </script>
+    <script>
+        buscar()
+    </script>
+    </html>
+
+    
+   
+<script>
+
+  var idp=1;
+  var long=0;
+
+    const url="https://andresa13.github.io/ejem_json_api/poke.json"
+
+    function buscar() {
+
+        fetch(url)
+        .then(function(response){
+            return response.json();
+        })        
+    
+        .then(function(data){
+            console.lor(data.figures);
+            long=data.figures.length;
+            console.log("lenght:"+ long);
+
+            var res=data.figures.figures.filter(item=>item.id ===idp)
+            console.log(res) ;    
+            var imagen=document.getElementById('pkm-img');
+            imagenes.src=res[0].figure;
+            var p1=document.getElementById('name');
+            p1.innerHTML="<b>Nombre:</b>"+res[0].names;
+            var p2=document.getElementById('type');
+            p2.inerHTML="<b>Tipo:</b>"+res [0].type;
+            var p3=document.getElementById('height');
+            p3.innerHTML="<b>Altura:</b>"+res[0].height+"cms.";
+            var p4=document.getElementById('weight');
+            p4.innerHTML="<b<>Peso:</b>"+res[0].weight+"kg.";
+            var p5=document.getElementById('des');
+            p5.innerHTML="<b>Descripcion: </b>"+res[0].des;
+        })
+
+           .catch(function (error ){
+            console.log(error);
+        });
+
+        if(idp>=long){
+            idp=1
+        }else{
+            idp++;
+        }
+
+    }
+    
+</script>
+<body>
+    <div id="elem"></div>
+
+    <script>
+        let element=document.getElementById("elem");
+        const ul="https://pokeapi.co/api/v2/pokemon/";
+        let pokemon="pikachu";
+
+        fetch(url+pokemon)
+        .then(function(response){
+            return response.json();
+        })
+
+
+        .then(function(data){
+            //info recibido
+            let div=crearNodo("div");
+            let img=crearNodo("img");
+            let nombre=crearNodo("span");
+            let id=crearNodo("span");
+            img.src=data.sprites.front_default;
+            id.innerHTML="["+data.id+"]:";
+            nombre.innerHTML=data.name;
+            adjuntar(div,nombre);
+            adjuntar(div,id);
+            adjuntar(div,img);
+            adjuntar(element,div);
+            console.log(data);
+        })
+            
+        .catch(function(error){
+            console.log(error);
+        });
+
+        function crearNodo(elemento){
+            return document.createElement(elemento);
+        }
+
+        function adjuntar(padre,hijo){
+            return padre.appendChild(hijo);
+        }
+
+
+
+    </script>
+</body>
+
+
+
+
+        
+</body>
+</html>
